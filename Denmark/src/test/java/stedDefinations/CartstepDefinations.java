@@ -7,10 +7,10 @@ import io.cucumber.java.en.Then;
 import utils.TestSetup;
 
 public class CartstepDefinations {
-	
+
 	public WebDriver driver;
-	 TestSetup testSetup;
-	CartstepDefinations(TestSetup testSetup){
+    public TestSetup testSetup;
+	public CartstepDefinations(TestSetup testSetup){
 		this.testSetup=testSetup;
 	}
 	

@@ -14,17 +14,15 @@ import utils.TestSetup;
 
 public class HomepagestepDefinations {
 	public WebDriver driver;
-  TestSetup testSetup;
-	HomepagestepDefinations(TestSetup testSetup){
+    public TestSetup testSetup;
+	public HomepagestepDefinations(TestSetup testSetup){
 		this.testSetup=testSetup;
-	}
-	
-	
+	}	
 	@Given("Launch the webpage")
 	public void launch_the_webpage() {
 	    System.out.println("I am launch the webpage");	    
 	    System.setProperty("webdriver.chrome.driver", "C:\\Batch5\\uk\\src\\test\\resources\\chromedriver.exe");
-		driver = new ChromeDriver();
+	    testSetup.driver = new ChromeDriver();
 	    testSetup.driver.manage().window().maximize();
 	    testSetup.driver.get("https://rahulshettyacademy.com/seleniumPractise/#/");
 	    testSetup.driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(8));		
