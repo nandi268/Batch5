@@ -2,30 +2,30 @@
 <testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-02-21T10:45:38 IST" name="Default suite" finished-at="2023-02-21T10:45:40 IST" duration-ms="2245">
+  <suite started-at="2023-02-22T10:48:29 IST" name="Default suite" finished-at="2023-02-22T10:48:36 IST" duration-ms="6586">
     <groups>
       <group name="cucumber">
-        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:cucumberOptions.TestNGTestRunner@51e69659]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:cucumberOptions.TestNgTestRunner@1cbb87f3]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test started-at="2023-02-21T10:45:38 IST" name="Default test" finished-at="2023-02-21T10:45:40 IST" duration-ms="2245">
-      <class name="cucumberOptions.TestNGTestRunner">
-        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:cucumberOptions.TestNGTestRunner@51e69659]" started-at="2023-02-21T10:45:38 IST" name="setUpClass" finished-at="2023-02-21T10:45:39 IST" duration-ms="1430" status="PASS">
+    <test started-at="2023-02-22T10:48:29 IST" name="Default test" finished-at="2023-02-22T10:48:36 IST" duration-ms="6586">
+      <class name="cucumberOptions.TestNgTestRunner">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:cucumberOptions.TestNgTestRunner@1cbb87f3]" started-at="2023-02-22T10:48:29 IST" name="setUpClass" finished-at="2023-02-22T10:48:33 IST" duration-ms="3536" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@420bc288]]>
+                <![CDATA[org.testng.TestRunner@64dafeed]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:cucumberOptions.TestNGTestRunner@51e69659]" started-at="2023-02-21T10:45:39 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-02-21T10:45:40 IST" duration-ms="335" status="FAIL">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:cucumberOptions.TestNgTestRunner@1cbb87f3]" started-at="2023-02-22T10:48:33 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-02-22T10:48:35 IST" duration-ms="2298" status="FAIL">
           <params>
             <param index="0">
               <value>
-                <![CDATA["Search the "Tomoato" product"]]>
+                <![CDATA["Add the product to the cart"]]>
               </value>
             </param>
             <param index="1">
@@ -34,51 +34,36 @@
               </value>
             </param>
           </params>
-          <exception class="io.cucumber.testng.UndefinedStepException">
+          <exception class="org.picocontainer.PicoCompositionException">
             <message>
-              <![CDATA[The step 'Open the homepage' and 2 other step(s) are undefined.
-You can implement these steps using the snippet(s) below:
-
-@Given("Open the homepage")
-public void open_the_homepage() {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-@When("Search the product {string}")
-public void search_the_product(String string) {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-@Then("Verify the product is displayed")
-public void verify_the_product_is_displayed() {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-]]>
+              <![CDATA[Either the specified parameters do not match any of the following constructors: [stedDefinations.HomepagestepDefinations(utils.TestSetup)]; OR the constructors were not accessible for 'stedDefinations.HomepagestepDefinations']]>
             </message>
             <full-stacktrace>
-              <![CDATA[io.cucumber.testng.UndefinedStepException: The step 'Open the homepage' and 2 other step(s) are undefined.
-You can implement these steps using the snippet(s) below:
-
-@Given("Open the homepage")
-public void open_the_homepage() {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-@When("Search the product {string}")
-public void search_the_product(String string) {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-@Then("Verify the product is displayed")
-public void verify_the_product_is_displayed() {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-
-at io.cucumber.core.runtime.TestCaseResultObserver.assertTestCasePassed(TestCaseResultObserver.java:69)
-at io.cucumber.testng.TestCaseResultObserver.assertTestCasePassed(TestCaseResultObserver.java:23)
-at io.cucumber.testng.TestNGCucumberRunner.lambda$runScenario$1(TestNGCucumberRunner.java:133)
+              <![CDATA[org.picocontainer.PicoCompositionException: Either the specified parameters do not match any of the following constructors: [stedDefinations.HomepagestepDefinations(utils.TestSetup)]; OR the constructors were not accessible for 'stedDefinations.HomepagestepDefinations'
+at org.picocontainer.injectors.ConstructorInjector.getGreediestSatisfiableConstructor(ConstructorInjector.java:200)
+at org.picocontainer.injectors.ConstructorInjector.getGreediestSatisfiableConstructor(ConstructorInjector.java:110)
+at org.picocontainer.injectors.ConstructorInjector.access$100(ConstructorInjector.java:51)
+at org.picocontainer.injectors.ConstructorInjector$1.run(ConstructorInjector.java:331)
+at org.picocontainer.injectors.AbstractInjector$ThreadLocalCyclicDependencyGuard.observe(AbstractInjector.java:270)
+at org.picocontainer.injectors.ConstructorInjector.getComponentInstance(ConstructorInjector.java:364)
+at org.picocontainer.injectors.AbstractInjectionFactory$LifecycleAdapter.getComponentInstance(AbstractInjectionFactory.java:56)
+at org.picocontainer.behaviors.AbstractBehavior.getComponentInstance(AbstractBehavior.java:64)
+at org.picocontainer.behaviors.Stored.getComponentInstance(Stored.java:91)
+at org.picocontainer.DefaultPicoContainer.getInstance(DefaultPicoContainer.java:699)
+at org.picocontainer.DefaultPicoContainer.getComponent(DefaultPicoContainer.java:647)
+at org.picocontainer.DefaultPicoContainer.getComponent(DefaultPicoContainer.java:678)
+at io.cucumber.picocontainer.PicoFactory.getInstance(PicoFactory.java:49)
+at io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47)
+at io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:29)
+at io.cucumber.core.runner.CoreStepDefinition.execute(CoreStepDefinition.java:66)
+at io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)
+at io.cucumber.core.runner.ExecutionMode$1.execute(ExecutionMode.java:10)
+at io.cucumber.core.runner.TestStep.executeStep(TestStep.java:86)
+at io.cucumber.core.runner.TestStep.run(TestStep.java:57)
+at io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:51)
+at io.cucumber.core.runner.TestCase.run(TestCase.java:95)
+at io.cucumber.core.runner.Runner.runPickle(Runner.java:75)
+at io.cucumber.testng.TestNGCucumberRunner.lambda$runScenario$1(TestNGCucumberRunner.java:132)
 at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$3(CucumberExecutionContext.java:151)
 at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
 at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:151)
@@ -114,15 +99,15 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- io.cucumber.testng.UndefinedStepException -->
+          </exception> <!-- org.picocontainer.PicoCompositionException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:cucumberOptions.TestNGTestRunner@51e69659]" started-at="2023-02-21T10:45:40 IST" name="tearDownClass" finished-at="2023-02-21T10:45:40 IST" duration-ms="260" status="PASS">
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:cucumberOptions.TestNgTestRunner@1cbb87f3]" started-at="2023-02-22T10:48:36 IST" name="tearDownClass" finished-at="2023-02-22T10:48:36 IST" duration-ms="219" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->
-      </class> <!-- cucumberOptions.TestNGTestRunner -->
+      </class> <!-- cucumberOptions.TestNgTestRunner -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

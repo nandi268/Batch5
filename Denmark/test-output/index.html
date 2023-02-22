@@ -51,7 +51,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Default_suite" class="navigator-link ">
-                    <span>C:\Users\LENOVO\AppData\Local\Temp\testng-eclipse-458834536\testng-customsuite.xml</span>
+                    <span>C:\Users\LENOVO\AppData\Local\Temp\testng-eclipse--1785779551\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -104,7 +104,7 @@
                     <div class="method-list-content failed suite-Default_suite">
                       <span>
                         <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="cucumberOptions.TestNGTestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Search the &quot;Tomoato&quot; product&quot;, &quot;Optional[User is able to use home page and validate all the feature...)">runScenario("Search the "Tomoato" product", "Optional[User is able to use home page and validate all the feature...)</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="cucumberOptions.TestNgTestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Add the product to the cart&quot;, &quot;Optional[User is able to use home page and validate all the features...)">runScenario("Add the product to the cart", "Optional[User is able to use home page and validate all the features...)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-Default_suite -->
@@ -122,37 +122,40 @@
           <div class="suite-Default_suite-class-failed">
             <div class="main-panel-header rounded-window-top">
               <img src="failed.png"/>
-              <span class="class-name">cucumberOptions.TestNGTestRunner</span>
+              <span class="class-name">cucumberOptions.TestNgTestRunner</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="runScenario(&quot;Search the &quot;Tomoato&quot; product&quot;, &quot;Optional[User is able to use home page and validate all the feature...)">
-                  </a> <!-- runScenario("Search the "Tomoato" product", "Optional[User is able to use home page and validate all the feature...) -->
+                  <a name="runScenario(&quot;Add the product to the cart&quot;, &quot;Optional[User is able to use home page and validate all the features...)">
+                  </a> <!-- runScenario("Add the product to the cart", "Optional[User is able to use home page and validate all the features...) -->
                   <span class="method-name">runScenario</span>
-                  <span class="parameters">("Search the "Tomoato" product", "Optional[User is able to use home page and validate all the features]")</span>
-                  <div class="stack-trace">io.cucumber.testng.UndefinedStepException: The step &apos;Open the homepage&apos; and 2 other step(s) are undefined.
-You can implement these steps using the snippet(s) below:
-
-@Given(&quot;Open the homepage&quot;)
-public void open_the_homepage() {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-@When(&quot;Search the product {string}&quot;)
-public void search_the_product(String string) {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-@Then(&quot;Verify the product is displayed&quot;)
-public void verify_the_product_is_displayed() {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-
-	at io.cucumber.core.runtime.TestCaseResultObserver.assertTestCasePassed(TestCaseResultObserver.java:69)
-	at io.cucumber.testng.TestCaseResultObserver.assertTestCasePassed(TestCaseResultObserver.java:23)
-	at io.cucumber.testng.TestNGCucumberRunner.lambda$runScenario$1(TestNGCucumberRunner.java:133)
+                  <span class="parameters">("Add the product to the cart", "Optional[User is able to use home page and validate all the features]")</span>
+                  <div class="stack-trace">org.picocontainer.PicoCompositionException: Either the specified parameters do not match any of the following constructors: [stedDefinations.HomepagestepDefinations(utils.TestSetup)]; OR the constructors were not accessible for &apos;stedDefinations.HomepagestepDefinations&apos;
+	at org.picocontainer.injectors.ConstructorInjector.getGreediestSatisfiableConstructor(ConstructorInjector.java:200)
+	at org.picocontainer.injectors.ConstructorInjector.getGreediestSatisfiableConstructor(ConstructorInjector.java:110)
+	at org.picocontainer.injectors.ConstructorInjector.access$100(ConstructorInjector.java:51)
+	at org.picocontainer.injectors.ConstructorInjector$1.run(ConstructorInjector.java:331)
+	at org.picocontainer.injectors.AbstractInjector$ThreadLocalCyclicDependencyGuard.observe(AbstractInjector.java:270)
+	at org.picocontainer.injectors.ConstructorInjector.getComponentInstance(ConstructorInjector.java:364)
+	at org.picocontainer.injectors.AbstractInjectionFactory$LifecycleAdapter.getComponentInstance(AbstractInjectionFactory.java:56)
+	at org.picocontainer.behaviors.AbstractBehavior.getComponentInstance(AbstractBehavior.java:64)
+	at org.picocontainer.behaviors.Stored.getComponentInstance(Stored.java:91)
+	at org.picocontainer.DefaultPicoContainer.getInstance(DefaultPicoContainer.java:699)
+	at org.picocontainer.DefaultPicoContainer.getComponent(DefaultPicoContainer.java:647)
+	at org.picocontainer.DefaultPicoContainer.getComponent(DefaultPicoContainer.java:678)
+	at io.cucumber.picocontainer.PicoFactory.getInstance(PicoFactory.java:49)
+	at io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47)
+	at io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:29)
+	at io.cucumber.core.runner.CoreStepDefinition.execute(CoreStepDefinition.java:66)
+	at io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)
+	at io.cucumber.core.runner.ExecutionMode$1.execute(ExecutionMode.java:10)
+	at io.cucumber.core.runner.TestStep.executeStep(TestStep.java:86)
+	at io.cucumber.core.runner.TestStep.run(TestStep.java:57)
+	at io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:51)
+	at io.cucumber.core.runner.TestCase.run(TestCase.java:95)
+	at io.cucumber.core.runner.Runner.runPickle(Runner.java:75)
+	at io.cucumber.testng.TestNGCucumberRunner.lambda$runScenario$1(TestNGCucumberRunner.java:132)
 	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$3(CucumberExecutionContext.java:151)
 	at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
 	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:151)
@@ -197,7 +200,7 @@ public void verify_the_product_is_displayed() {
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\LENOVO\AppData\Local\Temp\testng-eclipse-458834536\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\LENOVO\AppData\Local\Temp\testng-eclipse--1785779551\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -206,7 +209,7 @@ public void verify_the_product_is_displayed() {
 &lt;suite name=&quot;Default suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Default test&quot; verbose=&quot;2&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;cucumberOptions.TestNGTestRunner&quot;/&gt;
+      &lt;class name=&quot;cucumberOptions.TestNgTestRunner&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Default test --&gt;
 &lt;/suite&gt; &lt;!-- Default suite --&gt;
@@ -257,13 +260,13 @@ data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'runScenario')
-data.setCell(0, 2, 'cucumberOptions.TestNGTestRunner')
-data.setCell(0, 3, 335);
+data.setCell(0, 2, 'cucumberOptions.TestNgTestRunner')
+data.setCell(0, 3, 2298);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 335 ms</span>
+              <span class="suite-total-time">Total running time: 2 seconds</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -289,20 +292,20 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">cucumberOptions.TestNGTestRunner</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">cucumberOptions.TestNgTestRunner</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
-                <span class="method-name">setUpClass(org.testng.TestRunner@420bc288)</span>
+                <span class="method-name">setUpClass(org.testng.TestRunner@64dafeed)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
-                <span class="method-name">runScenario("Search the "Tomoato" product", "Optional[User is able to use home page and validate all the feature...)</span>
-                <span class="method-start">1469 ms</span>
+                <span class="method-name">runScenario("Add the product to the cart", "Optional[User is able to use home page and validate all the features...)</span>
+                <span class="method-start">3719 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">tearDownClass</span>
-                <span class="method-start">1853 ms</span>
+                <span class="method-start">6118 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
