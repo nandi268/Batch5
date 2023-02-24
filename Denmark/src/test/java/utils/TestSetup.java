@@ -7,10 +7,12 @@ import pageObjects.PageObjectManager;
 public class TestSetup {
 	
 	public WebDriver driver;
-	public PageObjectManager pageObjectManger;
+	public TestBase testBase;
+	public PageObjectManager pageObjectManager;
 	
 	public TestSetup() {
-		pageObjectManger=new PageObjectManager(driver);
+		testBase=new TestBase();		
+		pageObjectManager=new PageObjectManager(testBase.webDriverManager());
 	}
 
 }

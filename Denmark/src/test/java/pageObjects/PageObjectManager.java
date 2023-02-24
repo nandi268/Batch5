@@ -10,13 +10,13 @@ public class PageObjectManager {
 		this.driver=driver;
 	}
 	
-	public HomePage getHomePageObject(){
-		homePage=new HomePage(driver);
+	public HomePage getHomePage(){
+		HomePage homePage=new HomePage(driver);
 		return homePage;
 	}
 	
-	public CartPage getcartPageObject(){
-		cartPage=new CartPage(driver);
+	public CartPage getCartPage(){
+		CartPage cartPage=new CartPage(driver);
 		return cartPage;
 	}
 }

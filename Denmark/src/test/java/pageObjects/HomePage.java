@@ -18,4 +18,12 @@ By productName=By.cssSelector("h4.product-name");
 	public String getProductName(){
 	return	driver.findElement(productName).getText();
 	}
+	
+	By noProducts=By.xpath("//*[text()='Sorry, no products matched your search!']");
+	
+	public boolean isProductDisplayed(){
+		
+		return driver.findElement(noProducts).isDisplayed();
+		
+	}
 }
