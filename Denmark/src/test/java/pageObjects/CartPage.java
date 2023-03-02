@@ -17,4 +17,9 @@ public class CartPage {
 		String name = driver.findElement(productName).getText();		
 		return name;
 	}
+	
+	By proceedToChecckout=By.xpath("//button[text()='PROCEED TO CHECKOUT']");
+	public void proceedToCheckout() {
+		driver.findElement(proceedToChecckout).click();
+	}
 }

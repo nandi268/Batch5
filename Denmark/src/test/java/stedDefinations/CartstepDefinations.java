@@ -4,6 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
 import pageObjects.CartPage;
 import pageObjects.PageObjectManager;
 import utils.TestSetup;
@@ -12,9 +13,11 @@ public class CartstepDefinations {
 
 	public WebDriver driver;
 	TestSetup testSetup;
+	CartPage cartPage;
 
 	public CartstepDefinations(TestSetup testSetup) {
 		this.testSetup = testSetup;
+		this.cartPage=testSetup.pageObjectManager.getCartPage();
 	}
 
 	@Then("Verify the product is added to the cart")
@@ -27,6 +30,13 @@ public class CartstepDefinations {
 //		String productName=testSetup.driver.findElement(By.xpath("//*[@id=\"root\"]/div/header/div/div[3]/div[2]/div[1]/div[1]/ul/li/div[1]/p[1]")).getText();
 		System.out.println("Product name is " + actualProductName1);
 		testSetup.driver.quit();
+	}
+	
+	
+	@When("Continue Proceed to checkout")
+	public void continue_proceed_to_checkout() throws InterruptedException {
+		cartPage.proceedToCheckout();
+		Thread.sleep(4000);
 	}
 
 }

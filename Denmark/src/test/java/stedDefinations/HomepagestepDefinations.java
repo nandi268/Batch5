@@ -33,7 +33,6 @@ public class HomepagestepDefinations {
 		System.out.println("I am search the product");
 		Thread.sleep(10000);
 		homePage.searchProduct("Tomato");
-//		 testSetup.driver.findElement(By.xpath("//input[@type='search']")).sendKeys("Tomato");
 	}
 
 	@Then("Validate product is displayed")
@@ -46,16 +45,15 @@ public class HomepagestepDefinations {
 	@When("Add the produc to the cart")
 	public void add_the_produc_to_the_cart() throws InterruptedException {
 		Thread.sleep(6000);
-		testSetup.driver.findElement(By.xpath("//button[text()='ADD TO CART']")).click();
+		homePage.addToCart();
 	}
 
 	@And("^Open the cart window$")
 	public void open_the_cart_window() throws Throwable {
 		Thread.sleep(6000);
-		testSetup.driver.findElement(By.xpath("//*[@alt='Cart']")).click();
+		homePage.openCartPage();
 		Thread.sleep(6000);
-//		String productName=driver.findElement(By.xpath("//*[@id=\"root\"]/div/header/div/div[3]/div[2]/div[1]/div[1]/ul/li/div[1]/p[1]")).getText();
-//		System.out.println("Product name is " + productName);
+
 	}
 	
 	

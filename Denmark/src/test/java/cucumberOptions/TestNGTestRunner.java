@@ -5,7 +5,7 @@ import io.cucumber.testng.CucumberOptions;
 
 
 @CucumberOptions(features="src\\test\\java\\features", glue="\\stedDefinations", 
-tags="@Home3"
+tags="@Order_001"
 )
 public class TestNgTestRunner extends AbstractTestNGCucumberTests {
 

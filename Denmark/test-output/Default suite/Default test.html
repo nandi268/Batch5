@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>1/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Mon Feb 27 10:58:57 IST 2023</td>
+<td>Started on:</td><td>Thu Mar 02 10:02:31 IST 2023</td>
 </tr>
-<tr><td>Total time:</td><td>21 seconds (21802 ms)</td>
+<tr><td>Total time:</td><td>55 seconds (55520 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,18 +67,31 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
-<table width='100%' border='1' class='invocation-passed'>
-<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
 <td width="30%"><b>Exception</b></td>
 <td width="10%"><b>Time (seconds)</b></td>
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='cucumberOptions.TestNgTestRunner.runScenario()'><b>runScenario</b><br>Test class: cucumberOptions.TestNgTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify the search functionality for non existing products", "Optional[User is able to use home page and validate all the features]"</td>
-<td></td>
-<td>21</td>
-<td>cucumberOptions.TestNgTestRunner@4310d43</td></tr>
+<td title='cucumberOptions.TestNgTestRunner.runScenario()'><b>runScenario</b><br>Test class: cucumberOptions.TestNgTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User is able to place the single product order", "Optional[Order the products]"</td>
+<td><div><pre>java.lang.AssertionError: Order is not success: Failed expected [false] but found [true]
+	at org.testng.Assert.fail(Assert.java:99)
+	at org.testng.Assert.failNotEquals(Assert.java:1037)
+	at org.testng.Assert.assertFalse(Assert.java:67)
+	at stedDefinations.OrderPagestepDefinations.verify_order_is_success(OrderPagestepDefinations.java:46)
+	at ?.Verify order is success(file:///C:/Batch5/Denmark/src/test/java/features/Order.feature:17)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1184974266", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1184974266'><pre>java.lang.AssertionError: Order is not success: Failed expected [false] but found [true]
+	at org.testng.Assert.fail(Assert.java:99)
+	at org.testng.Assert.failNotEquals(Assert.java:1037)
+	at org.testng.Assert.assertFalse(Assert.java:67)
+	at stedDefinations.OrderPagestepDefinations.verify_order_is_success(OrderPagestepDefinations.java:46)
+	at ?.Verify order is success(file:///C:/Batch5/Denmark/src/test/java/features/Order.feature:17)
+</pre></div></td>
+<td>54</td>
+<td>cucumberOptions.TestNgTestRunner@f0da945</td></tr>
 </table><p>
 </body>
 </html>
