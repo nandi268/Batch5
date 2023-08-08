@@ -96,8 +96,17 @@ public class HomepagestepDefinations {
 	   }else {
 		   System.out.println("Fail");
 	   }
+	}	
+	@When("^Search the product on the home page (.+) and password (.+)$")
+    public void i_enter_username_and_password(String productName, String password) throws Throwable {
+    System.out.println(productName);
+    homePage.searchProduct(productName);
+    Thread.sleep(5000);
+    System.out.println(password);
+	} 
+	
+	@Then("I verify login is success")
+	public void i_verify_login_is_success() {
 	}
-	
-	
 
 }

@@ -16,6 +16,14 @@ Feature: Order the products
     Then Proceed to place the order
     Then Verify order is success
     
+    
+    
+    
+    
+    
+    
+    
+    
       @Order_002 
   Scenario: User is able to place the two products order
    Given Launch the webpage 

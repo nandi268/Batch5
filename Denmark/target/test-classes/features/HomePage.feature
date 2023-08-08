@@ -29,9 +29,9 @@ Feature: User is able to use home page and validate all the features
    
     @Home1_04 @smoke2 @Regression
  Scenario: Search the "Beans" on the home page
-    Given Launch the webpage on chrome 
+   Given Launch the webpage on chrome 
    When Search the product on home page "Brocolli"
-   Then Verify the product "Brocolli - 1 Kg" is displayed
+   Then Verify the product "Brocolli - 1 Kg" is displayed  
     
       @Home2
  Scenario: Add the product to the cart
@@ -53,6 +53,28 @@ Feature: User is able to use home page and validate all the features
        Given Launch the webpage 
        When Search the product "Kiwi"
        Then Verify product is not displayed
+       
+   @Home4_10
+  Scenario Outline: Title of your scenario outline
+    Given Launch the webpage   
+    When Search the product with the name <productName> on the home page
+    Then I verify the product is dispayed <status> on the home page
+    Examples: 
+      | name  | productName | status  |
+      | name1 |     Brocolli | success |
+      | name2 |     Brocolli | Fail    |
+      
+      @Login02
+  Scenario Outline: Title of your scenario outline
+    Given Launch the webpage 
+    When Search the product on the home page <productname> and password <password>
+    Then I verify login is success
+
+    Examples: 
+      | productname  | password |
+      | Brocolli |     nandi123 |
+      | Brocolli |     nakfkalfj123$ |
+         | Beans |     koalr123$$ |
 
 
 
