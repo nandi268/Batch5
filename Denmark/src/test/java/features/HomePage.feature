@@ -2,7 +2,7 @@
 Feature: User is able to use home page and validate all the features
   I want to use the home page
 
-  @Home1 @Nandi
+  @Home1 @Arjun
  Scenario: Search the "Tomoato" on the home page
     Given Launch the webpage 
     When Search the tomoato
